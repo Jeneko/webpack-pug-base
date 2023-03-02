@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("/assets/images/sad-cat-3dc06b6e.jpg")})();

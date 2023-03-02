@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.b86ffbbf.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.0d54940b.css">
+    <link rel="stylesheet" href="assets/css/main.0aa71a58.css">
+    <script src="assets/js/bootstrap.bundle.00b83417.js"></script>
+    <script src="assets/js/swiper-bundle.esm.1b189f4f.js"></script>
+    <script src="assets/js/main.86407dec.js"></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- HEADER-->
+    <header class="header container">
+      <div class="header__top-left">
+        <form id="form-language" action="{{ action }}" method="post" enctype="multipart/form-data">
+          <div class="dropdown lang-select"><button
+              class="btn btn-secondary dropdown-toggle lang-select__dropdown-toggle" type="button"
+              data-bs-toggle="dropdown" aria-expanded="false">En</button>
+            <ul class="dropdown-menu lang-select__dropdown-menu">
+              <li><button class="btn btn-secondary lang-select__btn-lang language-select" type="button"
+                  name="{{ language.code }}">English</button></li>
+              <li><button class="btn btn-secondary lang-select__btn-lang language-select" type="button"
+                  name="{{ language.code }}">Russian</button></li>
+            </ul>
+          </div>
+        </form>
+        <ul class="header__social-links social-links">
+          <li><a class="btn btn-social btn-patreon" href="#"></a></li>
+          <li><a class="btn btn-social btn-inst" href="#"></a></li>
+          <li><a class="btn btn-social btn-fb" href="#"></a></li>
+          <li><a class="btn btn-social btn-artsy" href="#"></a></li>
+          <li><a class="btn btn-social btn-vk" href="#"></a></li>
+          <li><a class="btn btn-social btn-youtube" href="#"></a></li>
+        </ul>
+      </div>
+      <div class="header__top-right"><a class="header__login btn btn-primary" href="login.html">Login | Register</a><a
+          class="header__cart btn btn-secondary" href="#" data-bs-toggle="modal" data-bs-target="#cart"><i
+            class="icon icon-cart"></i></a></div>
+      <ul class="header__menu header__menu--left">
+        <li class="header__menu-element"><a class="header__menu-link" href="boutique.html">Boutique</a></li>
+        <li class="header__menu-element"><a class="header__menu-link" href="gallery.html">Gallery</a>
+          <ul class="header__sub-menu">
+            <li><a href="gallery-category.html">Land&yen; &amp; Land&yen; Rat</a></li>
+            <li><a href="gallery-category.html">Lingerie Collection 2020</a></li>
+            <li><a href="gallery-category.html">Doll from Grimes Covers</a></li>
+            <li><a href="gallery-category.html">Tawny Owl</a></li>
+            <li><a href="gallery-category.html">Non-Human</a></li>
+            <li><a href="gallery-category.html">Land&yen; . Die Antwoord</a></li>
+            <li><a href="gallery-category.html">Dolls for MR. J.P. Gaultier</a></li>
+            <li><a href="gallery-category.html">Pearl Gray</a></li>
+            <li><a href="gallery-category.html">Nude Prototype</a></li>
+            <li><a href="gallery-category.html">Royals</a></li>
+            <li><a href="gallery-category.html">Genesis</a></li>
+            <li><a href="gallery-category.html">Pupa</a></li>
+            <li><a href="gallery-category.html">Widow Sisters</a></li>
+            <li><a href="gallery-category.html">Blue Skin</a></li>
+            <li><a href="gallery-category.html">Swan Lake</a></li>
+            <li><a href="gallery-category.html">Tsarskoe Selo</a></li>
+            <li><a href="gallery-category.html">Birds</a></li>
+            <li><a href="gallery-category.html">MOD. BJD</a></li>
+          </ul>
+        </li>
+        <li class="header__menu-element"><a class="header__menu-link" href="news.html">News</a></li>
+        <li class="header__menu-element"><a class="header__menu-link" href="for-customers.html">For Customers</a></li>
+      </ul><a class="header__sisters-logo sisters-logo" href="index.html" title="Home"></a>
+      <ul class="header__menu header__menu--right">
+        <li class="header__menu-element"><a class="header__menu-link" href="verification.html">Verification</a></li>
+        <li class="header__menu-element"><a class="header__menu-link" href="video.html">Video</a></li>
+        <li class="header__menu-element"><a class="header__menu-link" href="about-us-biography.html">About Us</a></li>
+        <li class="header__menu-element"><a class="header__menu-link" href="contacts.html">Contacts</a></li>
+      </ul>
+    </header>
+    <h1>Hello, World</h1>
+    <!-- FOOTER-->
+    <footer class="footer container-fluid">
+      <hr class="footer__line">
+      <ul class="footer__menu">
+        <li><a class="footer__menu-link" href="/terms.html">Terms and Conditions</a></li>
+        <li><a class="footer__menu-link" href="/policy.html">Privacy Policy</a></li>
+      </ul>
+      <div class="footer__copyright">&copy; 2023. All images and films on this site belong to Popovy Sisters. All work
+        is protected by copyright.</div>
+    </footer>
+  </body>
+</html>
