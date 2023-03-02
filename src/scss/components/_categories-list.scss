@@ -1,0 +1,42 @@
+.categories-list {
+  @include scrollbar-styles;
+
+  padding: 0;
+  min-width: 125px; // hack to deal with scroll and width jitter when resizing
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  list-style: none;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  &__main-category {
+    margin-bottom: 2rem;
+    color: $color-black;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__sub-categories {
+    margin-top: 1.5rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 0.75rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 0.875rem;
+    color: $color-menu-link;
+
+    &:hover {
+      color: $color-menu-link-hover;
+      font-weight: 500;
+    }
+  }
+}

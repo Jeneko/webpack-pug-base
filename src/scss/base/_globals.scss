@@ -1,0 +1,135 @@
+*::selection {
+  background: $color-selection-bg;
+  color: $color-selection;
+}
+
+*::placeholder {
+  font-style: italic;
+  color: $color-gray-2 !important;
+}
+
+body {
+  min-width: 375px;
+  color: $color-black;
+  font-family: $font-family-base;
+  background-color: $color-body-bg;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-black;
+}
+
+h1 {
+  font-size: $fs-h1-desktop;
+
+  @include media-breakpoint-down(md) {
+    font-size: $fs-h1-mobile;
+  }
+}
+
+h2 {
+  font-size: $fs-h2-desktop;
+  margin-bottom: 1.5rem;
+
+  @include media-breakpoint-down(md) {
+    font-size: $fs-h2-mobile;
+  }
+}
+
+h3 {
+  font-size: $fs-h3-desktop;
+  font-weight: 400;
+
+  @include media-breakpoint-down(md) {
+    font-size: $fs-h3-mobile;
+  }
+}
+
+p {
+  font-size: $fs-text;
+  line-height: $fs-text-line-height;
+}
+
+a {
+  font-size: $fs-text;
+  color: $color-link;
+
+  &:hover {
+    color: $color-link-hover;
+  }
+}
+
+.modal-fluid {
+  max-width: unset !important;
+}
+
+.backdrop {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.hover-underline {
+  position: relative;
+
+  &:hover {
+
+    &::before,
+    &::after {
+      width: 50%;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background: $color-black;
+    width: 0;
+    height: 1px;
+    bottom: -5px;
+    transition: ease .4s;
+
+    @include media-breakpoint-down(lg) {
+      bottom: -2px;
+    }
+  }
+
+  &::before {
+    left: 50%;
+  }
+
+  &::after {
+    right: 50%;
+  }
+}
+
+.asterisk {
+  &::before {
+    content: "* ";
+    color: $color-attention;
+    font-weight: 900;
+  }
+}
+
+div.required .col-form-label:before,
+div.required .form-label:before {
+  content: "* ";
+  color: $color-attention;
+  font-weight: 700;
+}
+
+.has-error .form-control {
+  border-color: $color-attention;
+  -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+}

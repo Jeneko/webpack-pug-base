@@ -1,0 +1,54 @@
+.checkout {
+  &__card:not(:last-child) {
+    margin-bottom: 2.5rem;
+  }
+
+  &__is-registered {
+    text-align: center;
+    margin-bottom: 0.75rem;
+
+    .btn {
+      margin-left: 0.25rem;
+    }
+  }
+
+  &__form {
+    display: grid;
+    gap: 1rem 0.75rem;
+    align-items: baseline;
+    grid-template-columns: 170px auto;
+
+    label {
+      text-align: right;
+    }
+  }
+
+  &__user {
+    padding: 2rem 0;
+  }
+
+  &__order {
+    padding: 2rem;
+    background-color: $color-gray-4;
+
+    @include media-breakpoint-down(lg) {
+      padding: 2rem 0.75rem;
+      margin: 0 -12px;
+    }
+  }
+
+  &__cart {
+    @include media-breakpoint-down(lg) {
+      margin-left: -0.75rem;
+      margin-right: -0.75rem;
+    }
+  }
+
+  &__btn-confirm {
+    width: 100%;
+  }
+
+  &__additional-info {
+    margin-top: 2rem;
+  }
+}

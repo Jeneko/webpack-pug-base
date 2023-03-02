@@ -1,0 +1,11 @@
+.page-header {
+  margin-bottom: 2.5rem;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 2rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 2rem;
+  }
+}

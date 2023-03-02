@@ -1,0 +1,15 @@
+.player {
+  width: 100%;
+  position: relative;
+
+  &__title {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: $color-black;
+    font-size: 0.625rem;
+  }
+}

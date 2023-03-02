@@ -4,17 +4,21 @@ const PugPlugin = require('pug-plugin');
 // To be able to use env we should use function
 // in our module.exports instead of regular object
 module.exports = function (env) {
+
+  const publicPath = env.mode === 'development' ? '/' : 'auto';
+  const devtool = env.mode === 'development' ? 'eval-cheap-module-source-map' : false;
+  const mode = env.mode === 'development' ? 'development' : 'production';
+
   return {
-    mode: env.mode === 'development' ? 'development' : 'production',
-    devtool: env.mode === 'development' ? 'eval-cheap-module-source-map' : false,
+    mode,
+    devtool,
     entry: {
       index: 'src/pug/index.pug',
-      // Add all additional pug pages here
+      // Add all additional pug pages here 👈
     },
     output: {
-      path: path.resolve(__dirname, 'dist'),
-      publicPath: '/',
       clean: true,
+      publicPath,
     },
     module: {
       rules: [
@@ -44,7 +48,7 @@ module.exports = function (env) {
     },
     plugins: [
       new PugPlugin({
-        pretty: env.mode === 'development',
+        pretty: true,
         js: {
           filename: 'assets/js/[name].[contenthash:8].js',
         },
@@ -60,6 +64,10 @@ module.exports = function (env) {
           usePolling: true,
         },
       },
+    },
+    performance: {
+      maxEntrypointSize: 1000000, // 1 mb
+      maxAssetSize: 1000000, // 1 mb
     },
   }
 };

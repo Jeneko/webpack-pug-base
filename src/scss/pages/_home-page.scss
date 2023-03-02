@@ -1,0 +1,18 @@
+.home-page {
+  &__content {
+    padding-top: 0;
+  }
+
+  .player {
+    margin: 2rem auto;
+    text-align: center;
+
+    @include media-breakpoint-down(lg) {
+      position: absolute;
+  
+      &__title {
+        color: $color-white;
+      }
+    }
+  }
+}
