@@ -1,0 +1,80 @@
+|
+|
+// HEADER
+
+header.header.container
+  .header__top-left
+    include /src/pug/components/language
+    ul.header__social-links.social-links
+      li
+        a.btn.btn-social.btn-patreon(href='#')
+      li
+        a.btn.btn-social.btn-inst(href='#')
+      li
+        a.btn.btn-social.btn-fb(href='#')
+      li
+        a.btn.btn-social.btn-artsy(href='#')
+      li
+        a.btn.btn-social.btn-vk(href='#')
+      li
+        a.btn.btn-social.btn-youtube(href='#')
+  .header__top-right
+    a.header__login.btn.btn-primary(href='login.html') Login | Register
+    a.header__cart.btn.btn-secondary(href='#' data-bs-toggle='modal' data-bs-target='#cart')
+      i.icon.icon-cart
+  ul.header__menu.header__menu--left
+    li.header__menu-element
+      a.header__menu-link(href='boutique.html') Boutique
+    li.header__menu-element
+      a.header__menu-link(href='gallery.html') Gallery
+      ul.header__sub-menu
+        li
+          a(href='gallery-category.html') Land&yen; &amp; Land&yen; Rat
+        li
+          a(href='gallery-category.html') Lingerie Collection 2020
+        li
+          a(href='gallery-category.html') Doll from Grimes Covers
+        li
+          a(href='gallery-category.html') Tawny Owl
+        li
+          a(href='gallery-category.html') Non-Human
+        li
+          a(href='gallery-category.html') Land&yen; . Die Antwoord
+        li
+          a(href='gallery-category.html') Dolls for MR. J.P. Gaultier
+        li
+          a(href='gallery-category.html') Pearl Gray
+        li
+          a(href='gallery-category.html') Nude Prototype
+        li
+          a(href='gallery-category.html') Royals
+        li
+          a(href='gallery-category.html') Genesis
+        li
+          a(href='gallery-category.html') Pupa
+        li
+          a(href='gallery-category.html') Widow Sisters
+        li
+          a(href='gallery-category.html') Blue Skin
+        li
+          a(href='gallery-category.html') Swan Lake
+        li
+          a(href='gallery-category.html') Tsarskoe Selo
+        li
+          a(href='gallery-category.html') Birds
+        li
+          a(href='gallery-category.html') MOD. BJD
+    li.header__menu-element
+      a.header__menu-link(href='news.html') News
+    li.header__menu-element
+      a.header__menu-link(href='for-customers.html') For Customers
+  a.header__sisters-logo.sisters-logo(href='index.html' title='Home')
+  ul.header__menu.header__menu--right
+    li.header__menu-element
+      a.header__menu-link(href='verification.html') Verification
+    li.header__menu-element
+      a.header__menu-link(href='video.html') Video
+    li.header__menu-element
+      a.header__menu-link(href='about-us-biography.html') About Us
+    li.header__menu-element
+      a.header__menu-link(href='contacts.html') Contacts

@@ -1,0 +1,34 @@
+.gallery-list {
+  @include scrollbar-styles;
+  margin: 0 0.75rem 1rem;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  overflow: auto;
+
+  &__item {
+
+    &:not(:last-child)::after {
+      content: '';
+      display: block;
+      margin: 1.25rem auto;
+      border-radius: 6px;
+      width: 6px;
+      height: 6px;
+      background-color: $color-black;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 0.125rem 0.75rem;
+    color: $color-menu-link;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-menu-link-hover;
+    }
+  }
+}

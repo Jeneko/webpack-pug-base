@@ -1,0 +1,52 @@
+.gallery {
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+
+  &__header {
+    position: relative;
+    margin-bottom: 1.375rem;
+  }
+
+  .player {
+    width: auto;
+    position: absolute;
+    top: 4px;
+    right: 0;
+
+    &__title {
+      transform: unset;
+      left: unset;
+      right: 0;
+    }
+
+    @include media-breakpoint-down(lg) {
+      position: static;
+
+      &__title {
+        transform: translateX(-50%);
+        left: 50%;
+        right: unset;
+      }
+    }
+  }
+
+  .swiper {
+    flex-grow: 2;
+    padding: 1.5rem;
+
+    @include media-breakpoint-down(md) {
+      padding: 3rem;
+    }
+  }
+
+  .swiper-slide {
+    opacity: 0.15;
+    min-width: 5vh;
+
+    &-active {
+      opacity: 1;
+    }
+  }
+}

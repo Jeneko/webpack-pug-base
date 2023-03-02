@@ -1,0 +1,14 @@
+.input-qty {
+  width: 2rem;
+  padding: 0.375rem 0.25rem;
+  font-weight: 300;
+  text-align: center;
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+  }
+
+}

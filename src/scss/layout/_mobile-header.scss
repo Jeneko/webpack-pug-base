@@ -1,0 +1,22 @@
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem $pd-container-adapt-md;
+
+  &__sisters-logo {
+    margin-top: -46px;
+    margin-bottom: -8px;
+
+    &::after {
+      top: 55px !important;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 1rem $pd-container-adapt-sm;
+  }
+}

@@ -44,7 +44,7 @@ module.exports = function (env) {
     },
     plugins: [
       new PugPlugin({
-        pretty: env.mode === 'development',
+        pretty: true,
         js: {
           filename: 'assets/js/[name].[contenthash:8].js',
         },
@@ -60,6 +60,9 @@ module.exports = function (env) {
           usePolling: true,
         },
       },
+    },
+    performance: {
+      maxAssetSize: 1000000, // set max asset size to 1 mb
     },
   }
 };

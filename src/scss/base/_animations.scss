@@ -1,0 +1,17 @@
+.slide-in {
+  animation-name: slide-in;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

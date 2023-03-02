@@ -1,0 +1,67 @@
+@mixin scrollbar-styles {
+  scrollbar-width: auto;
+  scrollbar-color: $color-social-link rgba(247, 247, 247, 0.95);
+
+  &::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $color-social-link;
+  }
+}
+
+@mixin button-color($color, $color-hover) {
+  background-color: $color;
+  border-color: $color;
+
+  &:hover {
+    background-color: $color-hover;
+    border-color: $color-hover;
+  }
+
+  &:active {
+    background-color: $color-hover !important;
+    border-color: $color-hover !important;
+  }
+}
+
+@mixin hover-underline($lg: -5px, $md: -5px, $sm: -5px) {
+  position: relative;
+
+  &:hover {
+
+    &::before,
+    &::after {
+      width: 50%;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background: $color-black;
+    width: 0;
+    height: 1px;
+    bottom: $lg;
+    transition: ease .4s;
+
+    @include media-breakpoint-down(lg) {
+      bottom: $md;
+    }
+
+    @include media-breakpoint-down(md) {
+      bottom: $sm;
+    }
+  }
+
+  &::before {
+    left: 50%;
+  }
+
+  &::after {
+    right: 50%;
+  }
+}

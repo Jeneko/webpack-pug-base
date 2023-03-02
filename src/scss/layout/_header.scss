@@ -1,0 +1,142 @@
+.header {
+  padding-top: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-areas:
+    'top-left logo top-right'
+    'menu-left logo menu-right';
+
+  &__top-left {
+    display: flex;
+    gap: 0.25rem;
+    align-items: flex-start;
+  }
+
+  &__top-right {
+    display: flex;
+    gap: 0.25rem;
+    align-items: flex-start;
+    justify-content: end;
+  }
+
+  &__social-links {
+    padding-left: 1rem;
+    padding-top: 2px;
+  }
+
+  &__sisters-logo {
+    grid-area: logo;
+    margin: 0 1rem;
+  }
+
+  &__login {
+    font-size: 0.75rem;
+    height: 32px;
+    font-weight: bold;
+  }
+
+  &__cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+  }
+
+  &__menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    list-style: none;
+
+    &--left {
+      grid-area: menu-left;
+    }
+
+    &--right {
+      grid-area: menu-right;
+    }
+  }
+
+  &__menu-link {
+    display: block;
+    font-size: 0.875rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-menu-link;
+    transition: all 0.3s ease-in-out;
+    padding-bottom: 0.5rem;
+
+    &:hover {
+      color: $color-menu-link-hover;
+    }
+  }
+
+  &__menu-element {
+    position: relative;
+
+    &:hover .header__sub-menu {
+      opacity: 1;
+      transform: translateX(0);
+      visibility: visible;
+      pointer-events: auto;
+
+      li {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__sub-menu {
+    white-space: nowrap;
+    position: absolute;
+    top: 100%;
+    left: -0.75rem;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-40%);
+    transition: ease .3s;
+    pointer-events: none;
+    padding: 2rem 0.75rem;
+    background-color: rgba(247, 247, 247, 0.95);
+    box-shadow: $shadow;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 80vh;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+    @include scrollbar-styles;
+
+    li {
+      margin: 0;
+      padding: 0;
+      font-size: 0.75rem;
+      line-height: 1.25;
+      text-transform: uppercase;
+      transform: translateX(60%);
+      transition: all .3s ease;
+    }
+
+    a {
+      display: block;
+      color: $color-menu-link;
+      text-decoration: none;
+      transition: all 0.12s ease-in-out;
+
+      &:hover {
+        color: $color-menu-link-hover;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+}
