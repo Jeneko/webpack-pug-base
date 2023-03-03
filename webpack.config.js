@@ -13,12 +13,12 @@ module.exports = function (env) {
     mode,
     devtool,
     entry: {
-      index: 'src/pug/index.pug',
+      index: 'src/views/pages/home/index.pug',
       // Add all additional pug pages here 👈
     },
     output: {
-      clean: true,
       publicPath,
+      clean: true,
     },
     module: {
       rules: [
@@ -31,7 +31,7 @@ module.exports = function (env) {
           use: ['css-loader', 'sass-loader'],
         },
         {
-          test: /\.(jpg|png|svg|webp)$/,
+          test: /\.(jpg|png|svg|webp|ico)$/,
           type: 'asset/resource',
           generator: {
             filename: 'assets/images/[name]-[contenthash:8][ext]',
@@ -58,6 +58,9 @@ module.exports = function (env) {
       }),
     ],
     devServer: {
+      static: {
+        directory: path.join(__dirname, 'dist'),
+      },
       watchFiles: {
         paths: ['src/**/*.*'],
         options: {
@@ -66,8 +69,8 @@ module.exports = function (env) {
       },
     },
     performance: {
-      maxEntrypointSize: 1000000, // 1 mb
-      maxAssetSize: 1000000, // 1 mb
+      maxEntrypointSize: 1024000, // 1 mb
+      maxAssetSize: 1024000, // 1 mb
     },
   }
 };

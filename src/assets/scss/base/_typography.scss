@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Geometria";
+  font-weight: lighter;
+  font-style: normal;
+  src: local("Geometria-Light"), local("Geometria Light"),
+    url('/src/assets/fonts/Geometria-Light.eot?#iefix') format('embedded-opentype'),
+    url('/src/assets/fonts/Geometria-Light.woff2') format('woff2'),
+    url('/src/assets/fonts/Geometria-Light.woff') format('woff'),
+    url('/src/assets/fonts/Geometria-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Geometria";
+  font-weight: normal;
+  font-style: normal;
+  src: local("Geometria-Regular"), local("Geometria Regular"),
+    url('/src/assets/fonts/Geometria-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/src/assets/fonts/Geometria-Regular.woff2') format('woff2'),
+    url('/src/assets/fonts/Geometria-Regular.woff') format('woff'),
+    url('/src/assets/fonts/Geometria-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Geometria";
+  font-weight: bold;
+  font-style: normal;
+  src: local("Geometria-Bold"), local("Geometria Bold"),
+    url('/src/assets/fonts/Geometria-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/src/assets/fonts/Geometria-Bold.woff2') format('woff2'),
+    url('/src/assets/fonts/Geometria-Bold.woff') format('woff'),
+    url('/src/assets/fonts/Geometria-Bold.ttf') format('truetype');
+}

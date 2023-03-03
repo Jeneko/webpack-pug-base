@@ -1,0 +1,14 @@
+//- External variables
+block variables
+
+doctype html
+html(lang="en")
+  head
+    include /src/views/layout/head
+    title= pageTitle
+  body
+    block header
+      include /src/views/layout/header
+    block content
+    block footer
+      include /src/views/layout/footer
